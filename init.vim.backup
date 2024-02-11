@@ -1,0 +1,37 @@
+if exists('g:vscode')
+  nnoremap p p=`]
+  nnoremap P P=`]
+  " VSCode extension
+  "call plug#begin()
+    "Plug 'ggandor/leap.nvim'
+  "call plug#end()
+    "
+  "lua require('leap').create_default_mappings()
+else
+    " ordinary Neovim
+	set relativenumber
+  set tabstop=2
+	set softtabstop=2
+  set shiftwidth=2 
+	set expandtab
+  "set autoindent
+  "set smartindent
+  
+  nnoremap p p=`]
+  nnoremap P P=`]
+
+  call plug#begin()
+  "plugin section
+  Plug 'ThePrimeagen/vim-be-good'
+  Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
+  Plug 'ggandor/leap.nvim'
+  Plug 'vim-airline/vim-airline'
+  "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  call plug#end()
+  
+  lua require('leap').create_default_mappings()
+
+  colorscheme moonfly
+
+end
