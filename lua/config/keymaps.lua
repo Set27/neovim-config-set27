@@ -11,3 +11,6 @@ vim.opt.expandtab = true
 -- Make sure to use 'n' for normal mode mappings
 vim.api.nvim_set_keymap('n', 'p', 'p=`]', {noremap = true})
 vim.api.nvim_set_keymap('n', 'P', 'P=`]', {noremap = true})
+
+vim.wo.relativenumber = true
+
