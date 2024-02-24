@@ -9,8 +9,11 @@ vim.opt.expandtab = true
 
 -- Define normal mode mappings
 -- Make sure to use 'n' for normal mode mappings
+-- Autoindent after pasting
 vim.api.nvim_set_keymap('n', 'p', 'p=`]', {noremap = true})
 vim.api.nvim_set_keymap('n', 'P', 'P=`]', {noremap = true})
 
+-- Current line chages
 vim.wo.relativenumber = true
-
+vim.wo.number = true
+vim.opt.numberwidth = 1
